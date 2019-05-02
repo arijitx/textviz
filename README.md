@@ -18,4 +18,19 @@ A python library for text vizulation for noobs. Supports attention visuzalizatio
     tv_block.add_text([sent],[labels])
     tv_block.gen_viz('viz_block.html')
     
- !()[https://raw.githubusercontent.com/arijitx/textviz/master/examples/block.png]
+ ![](https://raw.githubusercontent.com/arijitx/textviz/master/examples/block.png)
+
+
+## Attention Demo
+
+
+    from textviz import textviz
+
+    sent = 'There is a dog sitting under the tree.'
+    attns = [0.1, 0.2, 0.1, 0.075, .025, .2, 0.2, 0.05,0.05]
+    tv_attn = textviz(viz_type='attn')
+
+    tv_attn.add_text([sent],[attns])
+    tv_attn.gen_viz('viz_attn.html')
+
+![](https://raw.githubusercontent.com/arijitx/textviz/master/examples/attn.png)
